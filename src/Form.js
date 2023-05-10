@@ -6,7 +6,7 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const fetch = require("node-fetch");
   const url =
-    "https://a.klaviyo.com/api/v2/list/LIST_ID/subscribe?api_key=pk_d71db3eb521d57748eac364b7ace81bcde";
+    "https://a.klaviyo.com/api/v2/list/SbKQqi/subscribe?api_key=pk_d71db3eb521d57748eac364b7ace81bcde";
   const options = {
     method: "POST",
     headers: {
