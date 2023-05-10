@@ -16,7 +16,7 @@ const Form = () => {
     mode: "no-cors",
 
     body: JSON.stringify({
-      profiles: [{ email: email }],
+      emails: email,
     }),
   };
 
