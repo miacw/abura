@@ -13,7 +13,7 @@ const Form = () => {
       accept: "application/json",
       "content-type": "application/json",
     },
-    mode: "no-cors",
+
     body: JSON.stringify({
       profiles: [{ email: email }],
     }),
