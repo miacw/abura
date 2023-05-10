@@ -12,8 +12,7 @@ const Form = () => {
     headers: {
       accept: "application/json",
       "Content-Type": "application/json",
-      "Acess-Control-Allow-Origin": "*",
-      mode: "no-cors",
+      "Access-Control-Allow-Origin": "*",
     },
 
     body: JSON.stringify({
