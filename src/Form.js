@@ -12,6 +12,7 @@ const Form = () => {
     headers: {
       accept: "application/json",
       "content-type": "application/json",
+      "Access-Control-Allow-Origin": "https://aburatest.com/",
     },
 
     body: JSON.stringify({
@@ -27,7 +28,7 @@ const Form = () => {
     fetch(url, options)
       .then((res) => res.json())
       .then((json) => console.log(json))
-      .catch((err) => console.error("Error: " + err));
+      .catch((err) => console.error("error:" + err));
   };
 
   //return { handleSubmit, status, email };
