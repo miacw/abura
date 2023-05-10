@@ -12,7 +12,7 @@ const Form = () => {
     headers: {
       accept: "application/json",
       "content-type": "application/json",
-      "Access-Control-Allow-Origin": "https://aburatest.com/",
+      mode: "no-cors",
     },
 
     body: JSON.stringify({
