@@ -11,7 +11,7 @@ const Form = () => {
     method: "POST",
     headers: {
       accept: "application/json",
-      "content-type": "application/json",
+      "Content-Type": "application/json",
     },
 
     body: JSON.stringify({
