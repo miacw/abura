@@ -12,8 +12,8 @@ const Form = () => {
     headers: {
       accept: "application/json",
       "content-type": "application/json",
-      mode: "no-cors",
     },
+    mode: "no-cors",
 
     body: JSON.stringify({
       profiles: [{ email: email }],
