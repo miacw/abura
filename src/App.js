@@ -13,7 +13,7 @@ function App() {
   }
   return (
     <div className="container">
-      <button onClick={triggerCustomForm}>Stay in the Loop</button>
+      {/* <button onClick={triggerCustomForm}>Stay in the Loop</button> */}
       <Form />
     </div>
   );
