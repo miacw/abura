@@ -18,7 +18,7 @@ const Form = () => {
       accept: "application/json",
       "content-type": "application/x-www-form-urlencoded",
       "cache-control": "no-cache",
-      //mode: "no-cors",
+      mode: "no-cors",
     },
     data: {
       //   a: "VpujQP",
