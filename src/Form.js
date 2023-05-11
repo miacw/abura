@@ -8,7 +8,7 @@ const Form = () => {
   const fetch = require("node-fetch");
   //   const url =
   //     "https://a.klaviyo.com/api/v2/list/SbKQqi/subscribe?api_key=pk_d71db3eb521d57748eac364b7ace81bcde";
-  //   const url = "https://manage.kmail-lists.com/ajax/subscriptions/subscribe";
+  const url = "https://manage.kmail-lists.com/ajax/subscriptions/subscribe";
   const options = {
     async: true,
     crossDomain: true,
@@ -54,7 +54,7 @@ const Form = () => {
     //   .then((json) => console.log(json))
     //   .catch((err) => console.error("error:" + err));
     axios
-      .post(options)
+      .post(url, options)
       .then(function (response) {
         console.log(response.data);
       })
