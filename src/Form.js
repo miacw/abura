@@ -53,14 +53,18 @@ const Form = () => {
     //   .then((res) => res.json())
     //   .then((json) => console.log(json))
     //   .catch((err) => console.error("error:" + err));
-    axios
-      .post(url, options)
-      .then(function (response) {
-        console.log(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+
+    // axios
+    //   .post(url, options)
+    //   .then(function (response) {
+    //     console.log(response.data);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
+
+    window._klOnsite = window._klOnsite || [];
+    window._klOnsite.push(["openForm", "R9uZQE"]);
   };
 
   //return { handleSubmit, status, email };
