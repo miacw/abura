@@ -10,12 +10,14 @@ const Form = () => {
   //     "https://a.klaviyo.com/api/v2/list/SbKQqi/subscribe?api_key=pk_d71db3eb521d57748eac364b7ace81bcde";
   const url = "https://manage.kmail-lists.com/ajax/subscriptions/subscribe";
   const options = {
+    async: true,
+    crossDomain: true,
     method: "POST",
     headers: {
-      accept: "application/json",
+      //accept: "application/json",
       "content-type": "application/x-www-form-urlencoded",
       "cache-control": "no-cache",
-      mode: "no-cors",
+      //mode: "no-cors",
     },
     data: {
       g: "VLBBrg",
