@@ -3,6 +3,16 @@
   height: 8vh;
   display: flex;
   align-items: center;
+  background-color: #3d2424;
+}
+
+.logo-container {
+  height: inherit;
+}
+
+.logo-container img {
+  height: inherit;
+  cursor: pointer;
 }
 
 button {
@@ -15,6 +25,7 @@ button {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   text-align: center;
+  cursor: pointer;
 }
 
 button:hover {

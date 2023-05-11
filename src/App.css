@@ -9,4 +9,11 @@
   min-height: 100vh;
 
   background-color: #3d2424;
+  display: flex;
+  align-items: center;
+}
+
+.text-container h1 {
+  margin: 0px 0;
+  height: 124px;
 }

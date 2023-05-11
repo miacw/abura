@@ -1,5 +1,6 @@
 import React from "react";
 import "./Nav.css";
+import logoPNG from "../public/content/logo-png.png";
 
 const Nav = () => {
   function triggerForm() {
@@ -8,6 +9,9 @@ const Nav = () => {
   }
   return (
     <div className="nav-container">
+      <div className="logo-container">
+        <img src={logoPNG} alt="logo-png" />
+      </div>
       <button onClick={triggerForm} className="popupBtn">
         Stay in the Loop
       </button>

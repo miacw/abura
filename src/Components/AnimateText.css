@@ -1,0 +1,35 @@
+.word-wrapper {
+  font-size: 156px;
+}
+
+.header1 {
+  color: #63be7d;
+}
+
+/* .header2,
+.header1,
+.header3 {
+  color: #f6584d;
+} */
+
+.header2 {
+  color: #f6584d;
+}
+
+.header1,
+.header2 {
+  font-family: "Heebo";
+}
+
+.header3 {
+  font-family: "RocaTwo";
+  color: #fdece2;
+}
+
+.headers {
+  padding: 0 32px;
+}
+
+.replayBtn {
+  margin-top: 100px;
+}
