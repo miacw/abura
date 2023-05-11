@@ -18,7 +18,7 @@ const Form = () => {
       mode: "no-cors",
     },
     data: {
-      g: "SbKQqi",
+      g: "VLBBrg",
       email: email,
     },
 
