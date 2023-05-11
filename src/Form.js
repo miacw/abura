@@ -6,19 +6,25 @@ const Form = () => {
   const [status, setStatus] = useState("");
   const [email, setEmail] = useState("");
   const fetch = require("node-fetch");
-  const url =
-    "https://a.klaviyo.com/api/v2/list/SbKQqi/subscribe?api_key=pk_d71db3eb521d57748eac364b7ace81bcde";
+  //   const url =
+  //     "https://a.klaviyo.com/api/v2/list/SbKQqi/subscribe?api_key=pk_d71db3eb521d57748eac364b7ace81bcde";
+  const url = "https://manage.kmail-lists.com/ajax/subscriptions/subscribe";
   const options = {
     method: "POST",
     headers: {
       accept: "application/json",
-      "content-type": "application/json",
+      "content-type": "application/x-www-form-urlencoded",
+      "cache-control": "no-cache",
       mode: "no-cors",
     },
+    data: {
+      g: "SbKQqi",
+      email: email,
+    },
 
-    body: JSON.stringify({
-      emails: email,
-    }),
+    // body: JSON.stringify({
+    //   emails: email,
+    // }),
   };
 
   //   var settings = {
