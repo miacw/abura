@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import useForm from "./UseForm";
+import axios from "axios";
 
 const Form = () => {
   const [status, setStatus] = useState("");
@@ -20,15 +21,36 @@ const Form = () => {
     }),
   };
 
+  //   var settings = {
+  //     async: true,
+  //     crossDomain: true,
+  //     url: "https://manage.kmail-lists.com/ajax/subscriptions/subscribe",
+  //     method: "POST",
+  //     headers: {
+  //       "content-type": "application/x-www-form-urlencoded",
+  //       "cache-control": "no-cache",
+  //     },
+  //     data: {
+  //       g: "SbKQqi",
+  //       email: email,
+  //     },
+  //   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    //const finalFormEndpoint = endpointUrl || form.action;
-
-    fetch(url, options)
-      .then((res) => res.json())
-      .then((json) => console.log(json))
-      .catch((err) => console.error("error:" + err));
+    // //const finalFormEndpoint = endpointUrl || form.action;
+    // fetch(url, options)
+    //   .then((res) => res.json())
+    //   .then((json) => console.log(json))
+    //   .catch((err) => console.error("error:" + err));
+    axios
+      .post(url, options)
+      .then(function (response) {
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   //return { handleSubmit, status, email };
