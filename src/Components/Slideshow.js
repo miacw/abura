@@ -56,9 +56,9 @@ export const Child1 = (show) => {
             return <AnimatedCharacters {...item} key={index} />;
           })}
         </div>
-        <button onClick={handleReplay} className="replayBtn">
+        {/* <button onClick={handleReplay} className="replayBtn">
           Replay
-        </button>
+        </button> */}
       </motion.div>
     </motion.div>
   );
