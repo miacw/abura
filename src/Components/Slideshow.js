@@ -95,8 +95,8 @@ export const Child2 = (show) => {
       <AnimatePresence>
         <motion.div
           className="headers"
-          initial={{ y: "200%" }}
-          animate={{ y: [0, "200%"] }}
+          initial="hidden"
+          animate={replay ? "visible" : "hidden"}
           variants={container}
         >
           <div className="text-container">
