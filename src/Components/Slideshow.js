@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { render } from "@testing-library/react";
 import AnimatedCharacters from "./AnimatedText";
 
 export const Child1 = (show) => {
   const [replay, setReplay] = useState(true);
+  const MINUTE_MS = 4000;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setReplay(!replay);
+    }, MINUTE_MS);
+
+    return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+  }, []);
 
   const placeholderText = [
     {
