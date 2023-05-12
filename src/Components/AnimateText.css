@@ -12,7 +12,10 @@
   color: #f6584d;
 } */
 
-.header2 {
+.header2,
+.header4,
+.header5,
+.header6 {
   color: #f6584d;
 }
 
@@ -21,8 +24,12 @@
   font-family: "Heebo";
 }
 
-.header3 {
+.header3,
+.header6 {
   font-family: "RocaTwo";
+}
+
+.header3 {
   color: #fdece2;
 }
 

@@ -5,6 +5,7 @@ import "./App.css";
 import Form from "./Form";
 import Nav from "./Components/Nav";
 import AnimatedCharacters from "./Components/AnimatedText";
+import Slideshow from "./Components/Slideshow";
 
 function App() {
   const [replay, setReplay] = useState(true);
@@ -50,7 +51,7 @@ function App() {
       <Nav />
       <div className="container">
         {/* <Form /> */}
-        <motion.div
+        {/* <motion.div
           className="headers"
           initial="hidden"
           animate={replay ? "visible" : "hidden"}
@@ -64,7 +65,8 @@ function App() {
           <button onClick={handleReplay} className="replayBtn">
             Replay
           </button>
-        </motion.div>
+        </motion.div> */}
+        <Slideshow />
       </div>
     </>
   );

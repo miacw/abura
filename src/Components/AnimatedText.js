@@ -11,12 +11,18 @@ const tagMap = {
   header1: "h1",
   header2: "h1",
   header3: "h1",
+  header4: "h1",
+  header5: "h1",
+  header6: "h1",
 };
 
 const classMap = {
   header1: "header1",
   header2: "header2",
   header3: "header3",
+  header4: "header4",
+  header5: "header5",
+  header6: "header6",
 };
 
 const AnimatedCharacters = (props) => {
@@ -27,9 +33,13 @@ const AnimatedCharacters = (props) => {
       transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 1 },
     },
     visible: {
-      y: 0,
+      y: [0, "200%", 0],
 
       transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 },
+    },
+    hiddenSide: {
+      x: "-200",
+      transition: { ease: "linear", duration: 1 },
     },
   };
 
