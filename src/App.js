@@ -47,7 +47,7 @@ function App() {
   };
 
   return (
-    <>
+    <div>
       <Nav />
       <div className="container">
         {/* <Form /> */}
@@ -68,7 +68,7 @@ function App() {
         </motion.div> */}
         <Slideshow />
       </div>
-    </>
+    </div>
   );
 }
 

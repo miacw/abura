@@ -4,6 +4,11 @@
     url("./Fonts/FontsFree-Net-Roca-Two-Bold.ttf");
 }
 
+html {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 .container {
   width: 100vw;
   min-height: 100vh;
@@ -11,6 +16,14 @@
   background-color: #3d2424;
   display: flex;
   align-items: center;
+  /* hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* hide scrollbar for chrome, safari and opera */
+.container::-webkit-scrollbar {
+  display: none;
 }
 
 .text-container h1 {

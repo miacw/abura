@@ -3,17 +3,31 @@ import { motion, AnimatePresence } from "framer-motion";
 import { render } from "@testing-library/react";
 import AnimatedCharacters from "./AnimatedText";
 
+import AnimatedLogo from "./AnimatedLogo";
+
 export const Child1 = (show) => {
   const [replay, setReplay] = useState(true);
   const MINUTE_MS = 4000;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setReplay(!replay);
-    }, MINUTE_MS);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setReplay(!replay);
+  //     console.log("playing");
+  //   }, MINUTE_MS);
 
-    return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
-  }, []);
+  //   return () => {
+  //     clearInterval(interval);
+
+  //     console.log("clearing");
+  //   }; // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
+  // }, []);
+
+  React.useEffect(() => {
+    const interval = setTimeout(() => setReplay(!replay), 4000);
+    return () => {
+      clearInterval(interval); // removes React warning when gets unmounted
+    };
+  }, [replay]);
 
   const placeholderText = [
     {
@@ -33,12 +47,6 @@ export const Child1 = (show) => {
     },
   };
 
-  const handleReplay = () => {
-    setReplay(!replay);
-    // setTimeout(() => {
-    //   setReplay(true);
-    // }, 600);
-  };
   return (
     <motion.div
       initial={{ x: 1000 }}
@@ -56,9 +64,6 @@ export const Child1 = (show) => {
             return <AnimatedCharacters {...item} key={index} />;
           })}
         </div>
-        {/* <button onClick={handleReplay} className="replayBtn">
-          Replay
-        </button> */}
       </motion.div>
     </motion.div>
   );
@@ -89,12 +94,12 @@ export const Child2 = (show) => {
     },
   };
 
-  const handleReplay = () => {
-    setReplay(!replay);
-    // setTimeout(() => {
-    //   setReplay(true);
-    // }, 600);
-  };
+  React.useEffect(() => {
+    const interval = setTimeout(() => setReplay(!replay), 4000);
+    return () => {
+      clearInterval(interval); // removes React warning when gets unmounted
+    };
+  }, [replay]);
   return (
     <motion.div
       initial={{ x: 1000 }}
@@ -113,22 +118,46 @@ export const Child2 = (show) => {
               return <AnimatedCharacters {...item} key={index} />;
             })}
           </div>
-          <button onClick={handleReplay} className="replayBtn">
-            Replay
-          </button>
         </motion.div>
       </AnimatePresence>
     </motion.div>
   );
 };
-export const Child3 = (show) => {
+
+export const Child3 = () => {
   return (
     <motion.div
-      initial={{ x: 1000, y: "200%" }}
+      initial={{ x: 1000 }}
       animate={{ x: 0, transition: { ease: "linear", duration: 0.5 } }}
       exit={{ x: -1000 }}
     >
-      <h1>Child3</h1>
+      {/* <div className="text-container"> */}
+      <div style={{ display: "flex", margin: 0, width: "100%" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            margin: 0,
+            width: "100%",
+          }}
+        >
+          <AnimatedLogo />
+          <AnimatedLogo />
+          <AnimatedLogo />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            margin: 0,
+            width: "100%",
+          }}
+        >
+          <AnimatedLogo />
+          <AnimatedLogo />
+          <AnimatedLogo />
+        </div>
+      </div>
     </motion.div>
   );
 };
@@ -140,35 +169,30 @@ const Slideshow = () => {
     <Child3 showChild3 />,
   ];
   const [index, setIndex] = useState(0);
-  const [showChild1, setChild1] = useState(true);
-  const [showChild2, setChild2] = useState(false);
-  const [showChild3, setChild3] = useState(false);
 
-  const nextStep = () => {
-    if (index === children.length - 1) {
-      setIndex(0);
-    } else {
-      if (index === 0) {
-        setChild1(false);
-        setChild2(true);
+  React.useEffect(() => {
+    const interval = setTimeout(() => {
+      if (index === children.length - 1) {
+        setIndex(0);
+      } else {
+        setIndex(index + 1);
       }
-      if (index === 1) {
-        setChild2(false);
-        setChild3(true);
-      }
-      if (index === 2) {
-        setChild3(false);
-        setChild1(true);
-      }
-      setIndex(index + 1);
-    }
-  };
+    }, 5000);
+    return () => {
+      clearInterval(interval); // removes React warning when gets unmounted
+    };
+  }, [index]);
+
   return (
     <>
-      <motion.div className="slideshow-container">{children[index]}</motion.div>
-      <button className="nextBtn" onClick={nextStep}>
+      <motion.div
+        className={index === 2 ? "last-slide" : "slideshow-container"}
+      >
+        {children[index]}
+      </motion.div>
+      {/* <button className="nextBtn" onClick={nextStep}>
         Next
-      </button>
+      </button> */}
     </>
   );
 };
