@@ -20,13 +20,19 @@ const Nav = () => {
         <IconContext.Provider value={{ size: "20px" }}>
           <ul className="logos-list">
             <li>
-              <BsInstagram />
+              <a href="https://www.instagram.com/aburalondon/">
+                <BsInstagram />
+              </a>
             </li>
             <li>
-              <BsTwitter />
+              <a href="https://twitter.com/aburalondon?s=20">
+                <BsTwitter />
+              </a>
             </li>
             <li>
-              <BsFacebook />
+              <a href="https://www.facebook.com/profile.php?id=100092637402397">
+                <BsFacebook />
+              </a>
             </li>
           </ul>
         </IconContext.Provider>

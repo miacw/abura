@@ -34,7 +34,12 @@
   color: white;
 }
 
+.logos-list li a {
+  list-style: none;
+}
+
 button {
+  color: #000000;
   margin: 4px 32px 4px 16px;
   padding: 6px 12px;
   background-color: #f6584d;
@@ -54,3 +59,10 @@ button:hover {
 /* button.popupBtn {
   margin-left: auto;
 } */
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  button {
+    margin: 16px 4px;
+  }
+}
