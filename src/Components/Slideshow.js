@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { render } from "@testing-library/react";
 import AnimatedCharacters from "./AnimatedText";
+import "./Slideshow.css";
 
 import AnimatedLogo from "./AnimatedLogo";
 
@@ -145,14 +146,7 @@ export const Child3 = () => {
           <AnimatedLogo />
           <AnimatedLogo />
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            margin: 0,
-            width: "100%",
-          }}
-        >
+        <div className={window.innerWidth > 768 ? "show" : "hide"}>
           <AnimatedLogo />
           <AnimatedLogo />
           <AnimatedLogo />

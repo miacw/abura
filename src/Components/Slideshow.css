@@ -22,3 +22,13 @@ img {
   display: flex;
   flex-direction: column;
 }
+
+.show {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100%;
+}
+.hide {
+  display: none;
+}

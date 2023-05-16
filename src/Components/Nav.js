@@ -1,5 +1,6 @@
 import React from "react";
 import "./Nav.css";
+import logoRedShort from "../public/content/logo-short-red.svg";
 import logoPNG from "../public/content/logo-png.png";
 import logoSVG from "../public/content/logo-red.svg";
 import { IconContext } from "react-icons";
@@ -13,7 +14,7 @@ const Nav = () => {
   return (
     <div className="nav-container">
       <div className="logo-container">
-        <img src={logoSVG} alt="logo-png" />
+        <img src={logoRedShort} alt="logo-png" />
       </div>
       <div className="logos">
         <IconContext.Provider value={{ size: "20px" }}>
