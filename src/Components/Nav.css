@@ -36,6 +36,7 @@
 
 .logos-list li a {
   list-style: none;
+  color: #fdece2;
 }
 
 button {
@@ -63,6 +64,6 @@ button:hover {
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   button {
-    margin: 16px 4px;
+    margin: 4px 16px;
   }
 }
