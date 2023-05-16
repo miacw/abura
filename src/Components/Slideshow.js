@@ -186,7 +186,7 @@ const Slideshow = () => {
             : "slideshow-container"
         }
       >
-        {children[index]}
+        {children[2]}
       </motion.div>
       {/* <button className="nextBtn" onClick={nextStep}>
         Next
