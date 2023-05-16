@@ -186,7 +186,11 @@ const Slideshow = () => {
   return (
     <>
       <motion.div
-        className={index === 2 ? "last-slide" : "slideshow-container"}
+        className={
+          index === 2 && window.innerWidth > 768
+            ? "last-slide"
+            : "slideshow-container"
+        }
       >
         {children[index]}
       </motion.div>
