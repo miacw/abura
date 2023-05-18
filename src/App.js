@@ -6,7 +6,7 @@ import Form from "./Form";
 import Nav from "./Components/Nav";
 import AnimatedCharacters from "./Components/AnimatedText";
 import Slideshow from "./Components/Slideshow";
-
+import AnimatedSmallLogo from "./Components/Animations/AnimatedSmallLogo";
 function App() {
   const [replay, setReplay] = useState(true);
   const placeholderText = [
@@ -51,22 +51,8 @@ function App() {
       <Nav />
       <div className="container">
         {/* <Form /> */}
-        {/* <motion.div
-          className="headers"
-          initial="hidden"
-          animate={replay ? "visible" : "hidden"}
-          variants={container}
-        >
-          <div className="text-container">
-            {placeholderText.map((item, index) => {
-              return <AnimatedCharacters {...item} key={index} />;
-            })}
-          </div>
-          <button onClick={handleReplay} className="replayBtn">
-            Replay
-          </button>
-        </motion.div> */}
-        <Slideshow />
+
+        {/* <Slideshow /> */}
       </div>
     </div>
   );

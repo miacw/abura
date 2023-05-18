@@ -6,8 +6,12 @@
   background-color: #3d2424;
 }
 
-.logo-container {
+.logos-container {
   height: inherit;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 
 .logo-container img {
