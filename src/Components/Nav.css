@@ -54,10 +54,10 @@
 }
 
 button {
-  color: #fdece2;
+  color: #000000;
   margin: 4px 32px 4px 16px;
   padding: 6px 12px;
-  background-color: #000000;
+  background-color: #dd4f45;
   font-family: "RocaTwo", sans-serif;
 
   border: none;
@@ -69,7 +69,8 @@ button {
 }
 
 button:hover {
-  background-color: #dd4f45;
+  background-color: #000000;
+  color: #fdece2;
 }
 
 /* button.popupBtn {
