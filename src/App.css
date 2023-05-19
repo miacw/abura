@@ -9,11 +9,20 @@ html {
   overflow-x: hidden;
 }
 
+#root {
+  background: linear-gradient(
+    90deg,
+    rgba(55, 32, 32, 1) 0%,
+    rgba(49, 29, 29, 1) 48%,
+    rgba(61, 36, 36, 1) 100%
+  );
+}
+
 .container {
   width: 100vw;
   min-height: 100vh;
 
-  background-color: #3d2424;
+  /* background-color: #3d2424; */
   display: flex;
   align-items: center;
   justify-content: center;
