@@ -7,6 +7,8 @@ import Nav from "./Components/Nav";
 import AnimatedCharacters from "./Components/AnimatedText";
 import Slideshow from "./Components/Slideshow";
 import AnimatedSmallLogo from "./Components/Animations/AnimatedSmallLogo";
+import SheildButton from "./Components/SheildButton";
+import AnimateAbura from "./Components/Animations/AnimateAbura";
 function App() {
   const [replay, setReplay] = useState(true);
   const placeholderText = [
@@ -53,6 +55,8 @@ function App() {
         {/* <Form /> */}
 
         {/* <Slideshow /> */}
+
+        <AnimateAbura />
       </div>
     </div>
   );

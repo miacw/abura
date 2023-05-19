@@ -4,8 +4,15 @@ import logoRedShort from "../public/content/logo-short-red.svg";
 import logoPNG from "../public/content/logo-png.png";
 import logoSVG from "../public/content/logo-red.svg";
 import AnimatedSmallLogo from "./Animations/AnimatedSmallLogo";
+import SheildButton from "./SheildButton";
 import { IconContext } from "react-icons";
-import { BsInstagram, BsTwitter, BsFacebook } from "react-icons/bs";
+import {
+  BsInstagram,
+  BsTwitter,
+  BsFacebook,
+  BsTiktok,
+  BsYoutube,
+} from "react-icons/bs";
 
 const Nav = () => {
   function triggerForm() {
@@ -18,7 +25,7 @@ const Nav = () => {
         {/* <img src={logoRedShort} alt="logo-png" /> */}
         <AnimatedSmallLogo />
 
-        <div className="logos">
+        {/* <div className="logos">
           <IconContext.Provider value={{ size: "20px" }}>
             <ul className="logos-list">
               <li>
@@ -41,7 +48,8 @@ const Nav = () => {
         </div>
         <button onClick={triggerForm} className="popupBtn">
           Stay in the Loop
-        </button>
+        </button> */}
+        <SheildButton />
       </div>
     </div>
   );

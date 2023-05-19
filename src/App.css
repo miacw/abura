@@ -16,6 +16,7 @@ html {
   background-color: #3d2424;
   display: flex;
   align-items: center;
+  justify-content: center;
   /* hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;
   scrollbar-width: none;
