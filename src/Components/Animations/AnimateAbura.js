@@ -43,7 +43,7 @@ const ItemVariants = {
   open: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 150, damping: 24, duration: 3.5 },
+    transition: { type: "spring", stiffness: 150, damping: 24, duration: 6 },
   },
   closed: {
     opacity: 0,
@@ -67,7 +67,7 @@ const AnimateAbura = () => {
         bounce: 0,
         stiffness: 45,
 
-        duration: 1.2,
+        duration: 2,
         delayChildren: 0.3,
         staggerChildren: 0.8,
       },
@@ -108,9 +108,9 @@ const AnimateAbura = () => {
                 ease: "linear",
                 bounce: 0,
                 duration: 2.5,
-                delay: 0.7,
+                delay: 0.9,
                 delayChildren: 0.6,
-                staggerChildren: 0.08,
+                staggerChildren: 0.3,
               },
             },
             closed: {},
@@ -132,10 +132,10 @@ const AnimateAbura = () => {
         <motion.div
           className="underline"
           style={{ overflow: "hidden" }}
-          initial={{ x: -900 }}
+          initial={{ x: -800 }}
           animate={{ x: 2000 }}
           transition={{
-            duration: 5,
+            duration: 6,
             ease: "linear",
           }}
         ></motion.div>
