@@ -1,9 +1,11 @@
 .nav-container {
   width: 100vw;
+  /* height: 10vh; */
   height: 8vh;
   display: flex;
   align-items: center;
   background-color: #3d2424;
+  /* padding: 16px 0; */
 }
 
 .logos-container {
@@ -13,6 +15,10 @@
   width: 100%;
   align-items: center;
 }
+
+/* .logo-container {
+  align-self: start;
+} */
 
 .logo-container img {
   height: inherit;
@@ -34,8 +40,12 @@
   color: #fdece2;
 }
 
-.logos-list li:hover {
-  color: white;
+.logos-list li a svg {
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+.logos-list li a svg:hover {
+  color: #dd4f45;
 }
 
 .logos-list li a {
@@ -44,15 +54,16 @@
 }
 
 button {
-  color: #000000;
+  color: #fdece2;
   margin: 4px 32px 4px 16px;
   padding: 6px 12px;
-  background-color: #f6584d;
+  background-color: #000000;
   font-family: "RocaTwo", sans-serif;
+
   border: none;
-  border-radius: 4px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
   text-align: center;
   cursor: pointer;
 }
@@ -69,5 +80,13 @@ button:hover {
   /* For mobile phones: */
   button {
     margin: 4px 16px;
+  }
+
+  .logos-list li {
+    padding: 2px;
+  }
+
+  .logos-list li a svg {
+    height: 15px;
   }
 }

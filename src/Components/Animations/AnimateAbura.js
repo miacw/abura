@@ -132,7 +132,7 @@ const AnimateAbura = () => {
         <motion.div
           className="underline"
           style={{ overflow: "hidden" }}
-          initial={{ x: -1000 }}
+          initial={{ x: -900 }}
           animate={{ x: 2000 }}
           transition={{
             duration: 5,
