@@ -28,7 +28,7 @@ const SheildButton = () => {
   return (
     <div className="socials-container">
       <div className="socials">
-        <IconContext.Provider value={{ size: "12px" }}>
+        <IconContext.Provider value={{ className: "socials-icons" }}>
           <ul className="socials-list">
             <motion.li whileHover={{ scale: 1.1 }}>
               <a href="https://www.instagram.com/aburalondon/">

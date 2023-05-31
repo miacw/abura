@@ -60,6 +60,10 @@
   justify-content: center;
 }
 
+.socials-icons {
+  font-size: 22px;
+}
+
 .socials-list {
   list-style: none;
   display: flex;
@@ -136,8 +140,35 @@
 
 .popupText button {
   cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 
 .arrow:hover {
   color: #f6584d;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .socials-container {
+    top: 22px;
+    padding: 4px 8px;
+  }
+
+  .sheild {
+    width: 56px;
+  }
+
+  .popupText {
+    font-size: 9px;
+    width: 70%;
+    bottom: 42px;
+  }
+  .arrow {
+    font-size: 12px;
+  }
+
+  .socials-icons {
+    font-size: 12px;
+  }
 }
