@@ -8,7 +8,7 @@
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
   cursor: pointer;
   overflow: hidden;
-  width: 75px;
+  width: 88px;
 }
 
 .sheild-test {
@@ -61,7 +61,7 @@
 }
 
 .socials-icons {
-  font-size: 22px;
+  font-size: 14px;
 }
 
 .socials-list {
@@ -128,7 +128,7 @@
   position: relative;
   text-align: center;
   bottom: 52px;
-  font-size: 10px;
+  font-size: 12px;
   font-family: "rocaTwo", sans-serif;
   cursor: pointer;
 }
