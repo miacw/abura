@@ -42,10 +42,10 @@
   border-radius: 2px;
 }
 
-.header-container {
+/* .header-container {
   position: relative;
   bottom: 30px;
-}
+} */
 
 .header-container h2 {
   font-family: "Heebo", sans-serif;
@@ -74,9 +74,9 @@
     height: 15px;
   }
 
-  .header-container {
+  /* .header-container {
     bottom: 18px;
-  }
+  } */
 
   .header-container h2 {
     font-size: 18px;

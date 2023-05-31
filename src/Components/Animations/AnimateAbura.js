@@ -129,7 +129,7 @@ const AnimateAbura = () => {
         </motion.ul>
       </div>
       <div className="underline-container">
-        <motion.div
+        {/* <motion.div
           className="underline"
           style={{ overflow: "hidden" }}
           initial={{ x: -800 }}
@@ -138,7 +138,7 @@ const AnimateAbura = () => {
             duration: 6,
             ease: "linear",
           }}
-        ></motion.div>
+        ></motion.div> */}
         <div className="header-container">
           <motion.h2
             variants={sentence}

@@ -8,7 +8,12 @@ const AnimatedSmallLogo = () => {
       <div className="u-container">
         <motion.svg
           animate={{ y: -40 }}
-          transition={{ type: "spring", stiffness: 40, duration: 2 }}
+          transition={{
+            type: "spring",
+            stiffness: 40,
+            duration: 2.5,
+            delay: 2,
+          }}
           className="U"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 50 56.3"

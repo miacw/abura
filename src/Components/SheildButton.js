@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, ReactDOM } from "react";
 import { IconContext } from "react-icons";
 import {
   BsInstagram,
@@ -7,12 +7,14 @@ import {
   BsTiktok,
   BsYoutube,
 } from "react-icons/bs";
+import { HiOutlineArrowCircleRight } from "react-icons/hi";
 import { motion } from "framer-motion";
 import "./SheildButton.css";
 
 const SheildButton = () => {
   const [showText, setshowText] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const myRef = useRef(null);
 
   useEffect(() => {
     if (hovered) {
@@ -23,75 +25,83 @@ const SheildButton = () => {
     }
   }, [hovered]);
 
-  const line1 = "Visit the";
-  const line2 = "Well...";
-
-  const sentence = {
-    hidden: { opacity: 1 },
-    visible: {
-      opacity: 1,
-      transition: { delay: 0.2, staggerChildren: 0.08 },
-    },
-  };
-
-  const letter = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  };
-
   return (
     <div className="socials-container">
       <div className="socials">
         <IconContext.Provider value={{ size: "12px" }}>
           <ul className="socials-list">
-            <li>
+            <motion.li whileHover={{ scale: 1.1 }}>
               <a href="https://www.instagram.com/aburalondon/">
                 <BsInstagram />
               </a>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.1 }}>
               <a href="https://twitter.com/aburalondon?s=20">
                 <BsTwitter />
               </a>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.1 }}>
               <a href="https://www.facebook.com/profile.php?id=100092637402397">
                 <BsFacebook />
               </a>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.1 }}>
               <a href="https://www.facebook.com/profile.php?id=100092637402397">
                 <BsTiktok />
               </a>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.1 }}>
               <a href="https://www.facebook.com/profile.php?id=100092637402397">
                 <BsYoutube />
               </a>
-            </li>
+            </motion.li>
           </ul>
         </IconContext.Provider>
       </div>
-      <div className="shield-container">
-        <motion.svg
-          fill="#000000"
-          viewBox="0 0 256 256"
-          xmlns="http://www.w3.org/2000/svg"
-          className="sheild"
-          onMouseEnter={() => {
-            setHovered(true);
-          }}
-          onMouseLeave={() => {
-            setHovered(false);
-          }}
-          whileHover={{ scale: 1.1 }}
-        >
-          <path d="M224.00146,56v58.66406c0,89.46875-75.82812,119.125-91.03125,124.16406a15.45824,15.45824,0,0,1-9.9375,0c-15.21093-5.03906-91.03125-34.70312-91.03125-124.16406V56a16.02085,16.02085,0,0,1,16-16h160A16.02084,16.02084,0,0,1,224.00146,56Z" />
-        </motion.svg>
+      <motion.div
+        className="shield-container"
+        onMouseEnter={() => {
+          setHovered(true);
+        }}
+        onMouseLeave={() => {
+          setHovered(false);
+        }}
+        whileHover={{ scale: 1.05 }}
+      >
+        <>
+          <motion.svg
+            fill="#000000"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 532 511"
+            className="sheild "
+          >
+            <path
+              className="btnSvgPath"
+              id="aburaU"
+              d="M532,245c0,146.91-119.09,266-266,266h0C119.09,511,0,391.91,0,245V0s532,0,532,0v245Z"
+            />
+          </motion.svg>
+          <motion.p
+            className="popupText"
+            initial={{ opacity: 0, y: 100 }}
+            animate={
+              showText
+                ? {
+                    opacity: 1,
+                    y: 0,
+                  }
+                : 0
+            }
+          >
+            Visit the Well{" "}
+            <button style={{ border: "none", background: "none" }}>
+              <IconContext.Provider value={{ className: "arrow" }}>
+                <HiOutlineArrowCircleRight />
+              </IconContext.Provider>
+            </button>
+          </motion.p>
+        </>
+
         {/* <motion.svg
           className="sheild"
           onMouseEnter={() => {
@@ -112,29 +122,23 @@ const SheildButton = () => {
             id="mainIconPathAttribute"
           ></path>{" "}
         </motion.svg> */}
-        <motion.p
-          className="load-screen-message"
-          variants={sentence}
-          // initial="hidden"
-          animate={showText ? "visible" : "hidden"}
+
+        {/* <motion.div
+          ref={myRef}
+          className="sheild-test"
+          initial={{ rotate: 180 }}
+          whileHover={{ scale: 1.1 }}
+          onMouseMove={(e) => {
+            const x = e.pageX - myRef.current.offsetLeft;
+            const y = e.pageY - myRef.current.offsetTop;
+
+            myRef.current.style.setProperty("--y", y + "px");
+            myRef.current.style.setProperty("--x", x + "px");
+          }}
         >
-          {line1.split("").map((char, index) => {
-            return (
-              <motion.span key={char + "-" + index} variants={letter}>
-                {char}
-              </motion.span>
-            );
-          })}
-          <br />
-          {line2.split("").map((char, index) => {
-            return (
-              <motion.span key={char + "-" + index} variants={letter}>
-                {char}
-              </motion.span>
-            );
-          })}
-        </motion.p>
-      </div>
+          <p>Visit the Well</p>
+        </motion.div> */}
+      </motion.div>
     </div>
   );
 };

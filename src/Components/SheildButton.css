@@ -1,14 +1,63 @@
 .socials-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 8px;
+  position: relative;
+  top: 36px;
+  padding: 8px 16px;
 }
 
 .sheild {
-  width: 90px;
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
   cursor: pointer;
+  overflow: hidden;
+  width: 75px;
+}
+
+.sheild-test {
+  height: 150px;
+  width: 150px;
+  background-color: #f6584d;
+  clip-path: url(#aburaU);
+  transform: rotate(180deg);
+}
+
+.sheild-test {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  clip-path: path("M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z");
+}
+
+.sheild-test p {
+  transform: rotate(180deg);
+  font-family: "rocaTwo", sans-serif;
+  color: #fdece2;
+}
+
+.sheild-test::before {
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  width: 20px;
+  height: 20px;
+  background: blue;
+  border-radius: 50%;
+  z-index: 1;
+  transition: width 0.5s, height 0.5s;
+}
+
+.sheild-test:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.sheild-test p {
+  position: relative;
+  z-index: 1;
+}
+.socials {
+  display: flex;
+  justify-content: center;
 }
 
 .socials-list {
@@ -39,29 +88,56 @@
 
 .socials-list li a:hover {
   color: #f6584d;
+  scale: 1.1;
 }
 
-.socials {
+/* .socials {
   position: relative;
   top: 16px;
-}
+} */
 
 .shield-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
-.shield-container p {
-  font-family: "Heebo", sans-serif;
-  color: #3d2424;
+/* .shield-container p {
+  font-family: "Rocatwo", sans-serif;
+  color: #fdece2;
 
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
   padding: 0 2px;
   position: relative;
   bottom: 55px;
   height: auto;
-  width: 50%;
+  width: 80%;
   text-align: center;
+} */
+
+.popupText {
+  color: #fdece2;
+  z-index: 2;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  bottom: 52px;
+  font-size: 10px;
+  font-family: "rocaTwo", sans-serif;
+  cursor: pointer;
+}
+
+.arrow {
+  color: #c5463e;
+  font-size: 18px;
+}
+
+.popupText button {
+  cursor: pointer;
+}
+
+.arrow:hover {
+  color: #f6584d;
 }

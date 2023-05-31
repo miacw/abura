@@ -26,7 +26,7 @@ const Nav = () => {
         {/* <img src={logoRedShort} alt="logo-png" /> */}
         <AnimatedSmallLogo />
 
-        <div className="logos">
+        {/* <div className="logos">
           <IconContext.Provider value={{ size: "20px" }}>
             <ul className="logos-list">
               <li>
@@ -111,16 +111,17 @@ const Nav = () => {
               </li>
             </ul>
           </IconContext.Provider>
-        </div>
-        <motion.button
+        </div> */}
+        {/* <motion.button
+          className="button"
           onClick={triggerForm}
           whileHover={{ scale: 1.1 }}
           className="popupBtn"
         >
           Visit the Well
-        </motion.button>
-        {/* <SheildButton /> */}
+        </motion.button> */}
       </div>
+      <SheildButton />
     </div>
   );
 };
