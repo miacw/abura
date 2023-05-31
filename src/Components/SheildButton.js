@@ -70,7 +70,7 @@ const SheildButton = () => {
       >
         <>
           <motion.svg
-            fill="#1f1212"
+            fill="#000000"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 532 511"
             className="sheild "

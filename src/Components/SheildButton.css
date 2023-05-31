@@ -1,6 +1,6 @@
 .socials-container {
   position: relative;
-  top: 36px;
+  top: 28px;
   padding: 8px 16px;
 }
 
@@ -11,50 +11,6 @@
   width: 88px;
 }
 
-.sheild-test {
-  height: 150px;
-  width: 150px;
-  background-color: #f6584d;
-  clip-path: url(#aburaU);
-  transform: rotate(180deg);
-}
-
-.sheild-test {
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  position: relative;
-  clip-path: path("M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z");
-}
-
-.sheild-test p {
-  transform: rotate(180deg);
-  font-family: "rocaTwo", sans-serif;
-  color: #fdece2;
-}
-
-.sheild-test::before {
-  content: "";
-  position: absolute;
-  top: var(--y);
-  left: var(--x);
-  width: 20px;
-  height: 20px;
-  background: blue;
-  border-radius: 50%;
-  z-index: 1;
-  transition: width 0.5s, height 0.5s;
-}
-
-.sheild-test:hover::before {
-  width: 300px;
-  height: 300px;
-}
-
-.sheild-test p {
-  position: relative;
-  z-index: 1;
-}
 .socials {
   display: flex;
   justify-content: center;
@@ -101,9 +57,7 @@
 } */
 
 .shield-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 88px;
   overflow: hidden;
 }
 
@@ -127,7 +81,7 @@
   margin: 0;
   position: relative;
   text-align: center;
-  bottom: 52px;
+  bottom: 56px;
   font-size: 12px;
   font-family: "rocaTwo", sans-serif;
   cursor: pointer;
