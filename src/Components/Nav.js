@@ -16,10 +16,7 @@ import {
 } from "react-icons/bs";
 
 const Nav = () => {
-  function triggerForm() {
-    window._klOnsite = window._klOnsite || [];
-    window._klOnsite.push(["openForm", "R9uZQE"]);
-  }
+  
   return (
     <div className="nav-container">
       <div className="logos-container">

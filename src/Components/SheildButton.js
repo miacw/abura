@@ -12,6 +12,11 @@ import { motion } from "framer-motion";
 import "./SheildButton.css";
 
 const SheildButton = () => {
+  function triggerForm() {
+    window._klOnsite = window._klOnsite || [];
+    window._klOnsite.push(["openForm", "R9uZQE"]);
+  }
+
   const [showText, setshowText] = useState(false);
   const [hovered, setHovered] = useState(false);
   const myRef = useRef(null);
@@ -96,7 +101,7 @@ const SheildButton = () => {
             Visit the Well{" "}
             <button style={{ border: "none", background: "none" }}>
               <IconContext.Provider value={{ className: "arrow" }}>
-                <HiOutlineArrowCircleRight />
+                <HiOutlineArrowCircleRight onClick={triggerForm} />
               </IconContext.Provider>
             </button>
           </motion.p>
